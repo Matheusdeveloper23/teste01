@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <title>Cardápio do Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cardápio do Bar</h1>
+    </header>
+
+    <div class="container">
+        <div class="cardapio">
+            <div class="bebida">
+                <img src="https://via.placeholder.com/100" alt="Cerveja">
+                <h3>Cerveja</h3>
+                <p>R$ 10,00</p>
+                <button onclick="adicionarPedido('Cerveja', 10)">Adicionar</button>
+            </div>
+
+            <div class="bebida">
+                <img src="https://via.placeholder.com/100" alt="Caipirinha">
+                <h3>Caipirinha</h3>
+                <p>R$ 15,00</p>
+                <button onclick="adicionarPedido('Caipirinha', 15)">Adicionar</button>
+            </div>
+
+            <div class="bebida">
+                <img src="https://via.placeholder.com/100" alt="Mojito">
+                <h3>Mojito</h3>
+                <p>R$ 18,00</p>
+                <button onclick="adicionarPedido('Mojito', 18)">Adicionar</button>
+            </div>
+        </div>
+
+        <div class="total">
+            <p>Total: R$ <span id="total">0,00</span></p>
+        </div>
+
+        <div>
+            <!-- Botão de fazer pedido alterado para enviar os dados para a página de confirmação -->
+            <button class="pedido-button" id="fazerPedido" onclick="fazerPedido()">Fazer Pedido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
